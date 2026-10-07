@@ -1,0 +1,218 @@
+/* Colours follow the app's theme (lib/ui/theme.dart). */
+:root {
+  color-scheme: light;
+  --bg: #f4f4f8;
+  --surface: #ffffff;
+  --text: #1b1c23;
+  --muted: #686a7c;
+  --border: #e4e4ec;
+  --link: #4f5cf0;
+  --button: #4f5cf0;
+  --on-button: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #15161c;
+    --surface: #1b1c23;
+    --text: #ececf1;
+    --muted: #9c9eb1;
+    --border: #2b2c37;
+    --link: #8a94ff;
+    --button: #5865f2;
+    --on-button: #ffffff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 2px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 22.5%;
+}
+
+h1 {
+  margin: 36px 0 0;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 .alt {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.meta {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+
+.langs a {
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: inherit;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.langs a:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+section {
+  margin: 0 0 20px;
+  padding: 4px 24px 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  scroll-margin-top: 16px;
+}
+
+section[lang^="zh"] {
+  line-height: 1.8;
+}
+
+h2 {
+  margin: 20px 0 8px;
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+.lead {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.contact {
+  color: var(--muted);
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 1.25em;
+}
+
+li {
+  margin: 0 0 12px;
+}
+
+li::marker {
+  color: var(--link);
+}
+
+/* Home page */
+
+.home {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home .icon {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 20px;
+}
+
+.home h1 {
+  margin: 0;
+}
+
+.tagline {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.button {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--button);
+  color: var(--on-button);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home .contact {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 2px 16px 8px;
+    border-radius: 14px;
+  }
+}
